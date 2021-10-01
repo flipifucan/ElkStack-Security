@@ -149,11 +149,6 @@ These Beats allow us to collect the following information from each machine:
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
-SSH into the control node and follow the steps below:
-- Copy the` filebeat-playbook.yml and metricbeat-playbook.yml` file to` a nano filebeat-playbook.yml and metricbeat-playbook.yml in my /etc/ansible/files directory`.
-- Update the` filebeat-config.yml and metricbeat-config.yml` file to include... `IP address of Elk server 10.1.0.51 on specific ports`
-- Run the playbook, and navigate to` Kibana (http://20.80.180.39:5601/app/kibana)` to check that the installation worked as expected.
-
 ### Commands I used to run the Ansible playbooks and update files.
 
         cd /etc/ansible/files then run theses below
