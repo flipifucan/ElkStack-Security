@@ -129,6 +129,14 @@ We have installed the following Beats on these machines:
 
       Filebeats and metricbeats
 
+
+![Beats](IMAGE/added_data.png)
+
+<br>
+
+![Beats](IMAGE/Metricbeat_data.png)
+
+
 These Beats allow us to collect the following information from each machine:
 
 **Filebeat is a light-weight shipper that centralizes and forwards data logs.**
@@ -142,13 +150,6 @@ SSH into the control node and follow the steps below:
 - Copy the` filebeat-playbook.yml and metricbeat-playbook.yml` file to` a nano filebeat-playbook.yml and metricbeat-playbook.yml in my /etc/ansible/files directory`.
 - Update the` filebeat-config.yml and metricbeat-config.yml` file to include... `IP address of Elk server 10.1.0.51 on specific ports`
 - Run the playbook, and navigate to` Kibana (http://20.80.180.39:5601/app/kibana)` to check that the installation worked as expected.
-
-![Beats](IMAGE/added_data.png)
-
-<br>
-
-![Beats](IMAGE/Metricbeat_data.png)
-
 
 ### Commands I used to run the Ansible playbooks and update files.
 
