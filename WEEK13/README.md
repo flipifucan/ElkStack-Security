@@ -76,13 +76,15 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 ![FileBeat](IMAGE/metricbeat.png)
 
 The configuration details of each machine may be found below.
+IP address of local host is temporary and changes at times.
 
 | Name     | Function          | IP Address  | Operating System |
 |----------|-------------------|------------ |------------------|
 |Phillip   | Local Host        | 69.8.223.334| MacOs            |
-|Jump Box  | Gateway           | 10.0.0.4    | Linux Ubuntu18.4 |
-|Web-1     | DVWA Server       | 10.0.0.5    | Linux Ubuntu18.4 |
-|Web-2     | DVWA Server       | 10.0.0.7    | Linux Ubuntu18.4 |
+|Elk Server| Monitoring        | 10.1.0.5    | Linux Ubuntu 18.4|
+|Jump Box  | Gateway           | 10.0.0.4    | Linux Ubuntu 18.4|
+|Web-1     | DVWA Server       | 10.0.0.5    | Linux Ubuntu 18.4|
+|Web-2     | DVWA Server       | 10.0.0.7    | Linux Ubuntu 18.4|
 
 ### Access Policies
 
@@ -100,10 +102,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name        | Publicly Accessible | Allowed IP Addresses|
 |-------------|---------------------|---------------------|
-| Jump Box    | Yes | 10.0.0.0/16 - 10.1.0.0/16 |
-| Phillip     | Yes | 10.0.0.0/16 - 10.1.0.0/16 |
-| Web-1       | No  | 10.0.0.0/16 - 10.2.0.0/16 |
-| Web-2       | No  | 10.0.0.0/16 - 10.2.0.0/16 |
+| Phillip     | Yes                 | 10.0.0.0/16 - 10.1.0.0/16 |
+| Jump Box    | Yes                 | 10.0.0.0/16 - 10.1.0.0/16 |
+| Elk Server  | No                  | 10.1.0.5
+| Web-1       | No                  | 10.0.0.0/16 - 10.1.0.0/16 |
+| Web-2       | No                  | 10.0.0.0/16 - 10.1.0.0/16 |
 
 ### Elk Configuration
 
