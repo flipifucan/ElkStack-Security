@@ -24,7 +24,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   [Host](hosts.yml)
 
-  ** Other .sh files I made 
+  Other .sh files I made 
 
   [roulette_dealer_finder_by_time](roulette_dealer_finder_by_time.sh)
 
@@ -76,7 +76,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 ![FileBeat](IMAGE/metricbeat.png)
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function          | IP Address  | Operating System |
 |----------|-------------------|------------ |------------------|
@@ -89,13 +88,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the **`Jump-Box Provisioner`** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the **Jump-Box Provisioner** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
           
           Jump-Box public IP: 20.106.143.99
 
-Machines within the network can only be accessed by **`Jump-Box Provisioner`**.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by **Jump-Box Provisioner**.
           
           Jump-box private IP: 10.0.0.4 
 
@@ -112,14 +109,14 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
-        Pass te buck$$$ automation is the future and if you can free up admins for other work, moving forward, the furture will look brighter. Automating daily tasks is best practice to elliminate errors also. By using the same playbooks updating and installing web servers to the network will be much faster and easier.
+        Automation is the future and if you can free up admins for other work, moving forward, the furture will look brighter. Automating daily tasks is best practice to elliminate errors also. By using the same playbooks updating and installing web servers to the network will be much faster and easier.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ... Install Docker add containers as needed. **intall docker .io, python3, docker module**
 - ... Install Ansible configure playbooks and config files. **configure elk server and memory increase. download elk docker container and configure it.** 
 
-The following screenshot displays the result of running **`docker ps`** after successfully configuring the ELK instance.
+The following screenshot displays the result of running **docker ps** after successfully configuring the ELK instance.
 
 ![Docker ps output](IMAGE/elk_docker_ps.png)
 
@@ -134,9 +131,9 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 
-**`Filebeat is a light-weight shipper that centralizes and forwards data logs. `**
+**Filebeat is a light-weight shipper that centralizes and forwards data logs.**
 
-**`Metricbeat is also a light-weight shipper that collects metric from your system and services. From CPU to Memory, Load to Network and Redis to NGINX and much more it is a light-weight way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.   `**
+**Metricbeat is also a light-weight shipper that collects metric from your system and services. From CPU to Memory, Load to Network and Redis to NGINX and much more it is a light-weight way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.**
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -160,7 +157,9 @@ SSH into the control node and follow the steps below:
         ansible-playbook filebeat-playbook.yml and ansible-playbook metricbeat-playbook.yml
         http://20.80.180.39:5601/app/kibana
 
-        ### Below are the actual screen shots of the commands I ran.
+        
+
+### Below are the actual screen shots of the commands I ran.
 
 <br>
 
